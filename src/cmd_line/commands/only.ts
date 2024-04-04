@@ -6,7 +6,7 @@ export class OnlyCommand extends ExCommand {
   async execute(vimState: VimState): Promise<void> {
     await Promise.allSettled([
       vscode.commands.executeCommand('workbench.action.closeEditorsInOtherGroups'),
-      vscode.commands.executeCommand('workbench.action.maximizeEditor'),
+      vscode.commands.executeCommand('workbench.action.maximizeEditorHideSidebar'),
       vscode.commands.executeCommand('workbench.action.closePanel'),
     ]);
   }
